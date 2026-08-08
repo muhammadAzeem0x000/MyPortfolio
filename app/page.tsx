@@ -1,0 +1,322 @@
+const projects = [
+  {
+    index: "01",
+    slug: "tracepilot",
+    category: "Applied AI / LLM Engineering",
+    title: "TracePilot",
+    lead: "Evidence-grounded AI incident investigator",
+    description:
+      "An incident investigation system that turns repository evidence into structured, citation-validated findings—not another ungrounded AI answer.",
+    detail:
+      "Hybrid retrieval, durable background execution, validated citations, and production-grade evaluation make every conclusion traceable.",
+    tags: ["Python", "FastAPI", "Next.js", "PostgreSQL", "pgvector", "DeepSeek", "Gemini"],
+    live: "https://tracepilot-six.vercel.app",
+    github: "https://github.com/muhammadAzeem0x000/TracePilot",
+    featured: true,
+  },
+  {
+    index: "02",
+    slug: "supportflow",
+    category: "Full-Stack / SaaS Architecture",
+    title: "SupportFlow",
+    lead: "Multi-tenant customer support SaaS",
+    description:
+      "A tenant-safe support platform with distinct administrator, agent, and customer workflows built on PostgreSQL row-level security.",
+    detail:
+      "RBAC, private attachments, real-time collaboration, ticket operations, SLA tracking, and analytics share one secure data model.",
+    tags: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "RLS"],
+    live: "https://supportflowapp.vercel.app",
+    github: "https://github.com/muhammadAzeem0x000/SupportFlow",
+  },
+  {
+    index: "03",
+    slug: "signalroom",
+    category: "AI-Enabled Full Stack",
+    title: "SignalRoom",
+    lead: "Anonymous feedback & AI analytics",
+    description:
+      "A privacy-first feedback platform that transforms survey responses and private course material into evidence-grounded recommendations.",
+    detail:
+      "Single-use response codes, configurable surveys, secure document analysis, dashboards, and AI recommendations work as one product.",
+    tags: ["Next.js", "TypeScript", "Supabase", "DeepSeek", "Recharts"],
+    live: "https://instructorfeedbackai.vercel.app",
+    github: "https://github.com/muhammadAzeem0x000/student_feedback_analyzer",
+  },
+  {
+    index: "04",
+    slug: "musclebot",
+    category: "AI Product / Web + Mobile",
+    title: "MuscleBot",
+    lead: "AI fitness & nutrition product",
+    description:
+      "A web and Android product combining workout tracking, nutrition logging, progress analytics, and AI-generated planning workflows.",
+    detail:
+      "1,300+ exercises, subscriptions, push notifications, Health Connect, and Capacitor packaging take it beyond a browser-only demo.",
+    tags: ["React", "TypeScript", "Supabase", "Capacitor", "RevenueCat", "AI APIs"],
+    live: "https://musclebot.app",
+    github: "https://github.com/muhammadAzeem0x000/fitness",
+  },
+];
+
+const capabilities = [
+  {
+    number: "A",
+    title: "Applied AI systems",
+    body: "Grounded generation, tool calling, hybrid RAG, structured outputs, reranking, embeddings, and citation validation.",
+  },
+  {
+    number: "B",
+    title: "Backend architecture",
+    body: "FastAPI services, PostgreSQL data models, durable queues, multi-tenancy, RLS, retries, leases, and observability.",
+  },
+  {
+    number: "C",
+    title: "Product engineering",
+    body: "Polished web interfaces, real-time workflows, analytics, Android packaging, subscriptions, and third-party integrations.",
+  },
+  {
+    number: "D",
+    title: "Evaluation & delivery",
+    body: "Adversarial security tests, frozen holdouts, automated testing, Docker, CI/CD, and production-minded deployments.",
+  },
+];
+
+function Arrow() {
+  return <span aria-hidden="true">↗</span>;
+}
+
+function ProjectVisual({ slug }: { slug: string }) {
+  if (slug === "tracepilot") {
+    return (
+      <div className="trace-map" aria-label="TracePilot investigation flow">
+        <div className="trace-node node-incident"><span>01</span>Incident</div>
+        <div className="trace-line line-one" />
+        <div className="trace-node node-evidence"><span>02</span>Evidence</div>
+        <div className="trace-line line-two" />
+        <div className="trace-node node-reason"><span>03</span>Reason</div>
+        <div className="trace-line line-three" />
+        <div className="trace-node node-cite"><span>04</span>Cite</div>
+        <div className="trace-pulse" />
+      </div>
+    );
+  }
+
+  if (slug === "supportflow") {
+    return (
+      <div className="tenant-map" aria-label="SupportFlow tenant isolation diagram">
+        <div className="tenant-title">TENANT ISOLATION</div>
+        <div className="tenant-row"><span>ORG_A</span><i /><i /><i /></div>
+        <div className="tenant-row"><span>ORG_B</span><i /><i /><i /></div>
+        <div className="tenant-row"><span>ORG_C</span><i /><i /><i /></div>
+        <div className="tenant-policy">RLS POLICY / ACTIVE</div>
+      </div>
+    );
+  }
+
+  if (slug === "signalroom") {
+    return (
+      <div className="signal-map" aria-label="SignalRoom feedback signal visualization">
+        <div className="signal-bars">
+          {[32, 58, 43, 78, 52, 88, 65, 74, 48, 82, 62, 92].map((height, index) => (
+            <i key={index} style={{ height: `${height}%` }} />
+          ))}
+        </div>
+        <div className="signal-caption"><span>PRIVATE INPUT</span><span>GROUNDED OUTPUT</span></div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="fitness-map" aria-label="MuscleBot product metric visualization">
+      <div className="fitness-ring"><span>1.3K+</span><small>EXERCISES</small></div>
+      <div className="fitness-list">
+        <div><span>WORKOUTS</span><i style={{ width: "88%" }} /></div>
+        <div><span>NUTRITION</span><i style={{ width: "72%" }} /></div>
+        <div><span>PROGRESS</span><i style={{ width: "81%" }} /></div>
+      </div>
+    </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <main>
+      <header className="site-header">
+        <a className="brand" href="#top" aria-label="Muhammad Azeem, back to top">
+          <span className="brand-mark">MA</span>
+          <span className="brand-copy">MUHAMMAD AZEEM<small>SOFTWARE ENGINEER</small></span>
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="#work">Work</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a className="status-pill" href="#contact"><i /> Open to conversations</a>
+      </header>
+
+      <section className="hero" id="top">
+        <div className="hero-grid" aria-hidden="true" />
+        <div className="hero-copy">
+          <p className="eyebrow"><span>01 / SYSTEM PROFILE</span><span>FULL-STACK × APPLIED AI</span></p>
+          <h1>
+            I build software
+            <span>that can <em>reason</em>,</span>
+            retrieve &amp; ship.
+          </h1>
+          <p className="hero-intro">
+            Software Engineer building full-stack and applied AI systems with Python,
+            FastAPI, Next.js, TypeScript, PostgreSQL, and production LLM workflows.
+          </p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#work">Explore the systems <span aria-hidden="true">↓</span></a>
+            <a className="text-link" href="https://github.com/muhammadAzeem0x000" target="_blank" rel="noreferrer">
+              GitHub profile <Arrow />
+            </a>
+          </div>
+          <div className="hero-proof" aria-label="Portfolio overview">
+            <div><strong>04</strong><span>Production-minded<br />case studies</span></div>
+            <div><strong>02</strong><span>Surfaces<br />Web + Android</span></div>
+            <div><strong>01</strong><span>Focus<br />Systems that hold up</span></div>
+          </div>
+        </div>
+
+        <div className="hero-visual" aria-label="Portrait of Muhammad Azeem">
+          <div className="portrait-frame">
+            <div className="frame-label top-label">BUILDER / 0001</div>
+            <div className="frame-label side-label">EVIDENCE &gt; HYPE</div>
+            <div className="portrait-image" />
+            <div className="scan-line" aria-hidden="true" />
+            <div className="corner corner-one" /><div className="corner corner-two" />
+            <div className="portrait-caption">
+              <div><span>DISCIPLINE</span><strong>Engineering</strong></div>
+              <div><span>CURRENT SIGNAL</span><strong className="signal-live"><i /> Building</strong></div>
+            </div>
+          </div>
+          <div className="orbit-note note-one"><span>LLM</span>GROUNDING</div>
+          <div className="orbit-note note-two"><span>DB</span>POSTGRES</div>
+          <div className="orbit-note note-three"><span>API</span>FASTAPI</div>
+        </div>
+      </section>
+
+      <div className="signal-strip" aria-hidden="true">
+        <div>STRUCTURED OUTPUTS</div><i />
+        <div>HYBRID RETRIEVAL</div><i />
+        <div>TENANT-SAFE DATA</div><i />
+        <div>DURABLE EXECUTION</div><i />
+        <div>OBSERVABLE SYSTEMS</div>
+      </div>
+
+      <section className="work-section" id="work">
+        <div className="section-heading">
+          <div>
+            <p className="section-index">02 / SELECTED SYSTEMS</p>
+            <h2>Built beyond<br /><em>the happy path.</em></h2>
+          </div>
+          <p>
+            Four products that move from applied AI investigation to secure SaaS,
+            privacy-first analytics, and cross-platform product engineering.
+          </p>
+        </div>
+
+        <div className="projects-grid">
+          {projects.map((project) => (
+            <article
+              className={`project-card project-${project.slug} ${project.featured ? "project-featured" : ""}`}
+              key={project.slug}
+            >
+              <div className="project-topline">
+                <span>{project.index} / 04</span>
+                <span>{project.category}</span>
+              </div>
+              <div className="project-content">
+                <div className="project-copy">
+                  <h3>{project.title}</h3>
+                  <p className="project-lead">{project.lead}</p>
+                  <p className="project-description">{project.description}</p>
+                  <p className="project-detail">{project.detail}</p>
+                </div>
+                <ProjectVisual slug={project.slug} />
+              </div>
+              {project.slug === "tracepilot" && (
+                <div className="demo-note">
+                  <span>READ-ONLY PUBLIC DEMO</span>
+                  The full investigation pipeline, retrieval, worker, tool calling, and evaluations are implemented and tested.
+                </div>
+              )}
+              <div className="project-footer">
+                <ul aria-label={`${project.title} technologies`}>
+                  {project.tags.map((tag) => <li key={tag}>{tag}</li>)}
+                </ul>
+                <div className="project-links">
+                  <a href={project.live} target="_blank" rel="noreferrer">Live demo <Arrow /></a>
+                  <a href={project.github} target="_blank" rel="noreferrer">Source <Arrow /></a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="expertise-section" id="expertise">
+        <div className="expertise-heading">
+          <p className="section-index">03 / ENGINEERING RANGE</p>
+          <h2>From model call<br />to <em>maintainable system.</em></h2>
+          <p className="expertise-intro">
+            I work across the boundaries where AI behavior, backend reliability,
+            secure data, and product experience have to agree.
+          </p>
+        </div>
+        <div className="capability-list">
+          {capabilities.map((capability) => (
+            <article key={capability.number}>
+              <span>{capability.number}</span>
+              <h3>{capability.title}</h3>
+              <p>{capability.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="principles-section">
+        <div className="principles-rail">
+          <span>INPUT</span><i /><span>CONSTRAINTS</span><i /><span>EVIDENCE</span><i /><span>OUTPUT</span>
+        </div>
+        <div className="principles-copy">
+          <p className="section-index">04 / BUILD PHILOSOPHY</p>
+          <blockquote>“Useful AI begins where the demo ends.”</blockquote>
+          <p>
+            The interesting work is not wiring up one model call. It is building the
+            retrieval, validation, security, queues, tests, and interfaces that make
+            the result dependable enough to use.
+          </p>
+          <div className="principle-tags">
+            <span>Evidence-grounded</span><span>Security-aware</span><span>Observable</span><span>Evaluated</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="contact-section" id="contact">
+        <div className="contact-signal"><i /><span>SIGNAL OPEN</span></div>
+        <p className="section-index">05 / START A CONVERSATION</p>
+        <h2>Have a hard system<br />worth <em>building well?</em></h2>
+        <p className="contact-copy">
+          I’m interested in applied AI, backend-heavy products, and engineering
+          problems where correctness matters as much as the interface.
+        </p>
+        <a className="contact-button" href="https://github.com/muhammadAzeem0x000" target="_blank" rel="noreferrer">
+          <span>LET’S COMPARE NOTES</span><Arrow />
+        </a>
+      </section>
+
+      <footer>
+        <div className="footer-brand">MUHAMMAD<br />AZEEM</div>
+        <p>Software Engineer building Full-Stack &amp; Applied AI Systems.</p>
+        <div className="footer-links">
+          <a href="#top">Back to top ↑</a>
+          <a href="https://github.com/muhammadAzeem0x000" target="_blank" rel="noreferrer">GitHub <Arrow /></a>
+        </div>
+        <div className="footer-meta">DESIGNED WITH INTENT / ENGINEERED FOR CLARITY</div>
+      </footer>
+    </main>
+  );
+}
