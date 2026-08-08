@@ -8,7 +8,7 @@
   --line: rgba(213, 239, 232, 0.14);
   --line-strong: rgba(213, 239, 232, 0.28);
   --paper: #e6eee9;
-  --muted: #91a09c;
+  --muted: #a9b5b1;
   --signal: #77f2d0;
   --signal-soft: rgba(119, 242, 208, 0.12);
   --amber: #ffb86b;
@@ -97,7 +97,7 @@ a {
 .brand-copy small {
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.14em;
   margin-top: 4px;
@@ -115,7 +115,7 @@ a {
 .footer-links a {
   position: relative;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -155,7 +155,7 @@ a {
   border-radius: 99px;
   color: #bcc8c4;
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -219,8 +219,10 @@ a {
   gap: 20px;
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 13px;
+  font-weight: 600;
   letter-spacing: 0.12em;
+  line-height: 1.45;
   text-transform: uppercase;
 }
 
@@ -295,7 +297,7 @@ a {
   padding: 0 18px 0 22px;
   border: 1px solid var(--signal);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -350,7 +352,8 @@ a {
 .hero-proof span {
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 12px;
+  font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 1.55;
   text-transform: uppercase;
@@ -405,7 +408,8 @@ a {
   color: var(--signal);
   background: var(--ink);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 12px;
+  font-weight: 600;
   letter-spacing: 0.14em;
 }
 
@@ -475,7 +479,8 @@ a {
 .portrait-caption span {
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 7px;
+  font-size: 12px;
+  font-weight: 500;
   letter-spacing: 0.12em;
 }
 
@@ -504,7 +509,7 @@ a {
   border: 1px solid var(--line);
   background: rgba(8, 12, 12, 0.88);
   font-family: var(--mono);
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.1em;
 }
 
@@ -533,7 +538,7 @@ a {
   background: var(--signal);
   overflow: hidden;
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.12em;
   white-space: nowrap;
@@ -564,7 +569,7 @@ a {
 .section-index {
   margin: 0 0 24px;
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -676,7 +681,7 @@ a {
   margin: 18px 0 0;
   color: var(--signal);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -694,7 +699,7 @@ a {
   max-width: 620px;
   margin: 16px 0 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.65;
 }
 
@@ -724,14 +729,14 @@ a {
   border: 1px solid rgba(119, 242, 208, 0.38);
   background: #0c1413;
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .trace-node span {
   color: var(--signal);
-  font-size: 7px;
+  font-size: 10.5px;
 }
 
 .node-incident { top: 38px; left: 34px; }
@@ -773,14 +778,14 @@ a {
   border-left: 2px solid var(--amber);
   color: #aebbb6;
   background: rgba(255, 184, 107, 0.06);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.5;
 }
 
 .demo-note span {
   color: var(--amber);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.1em;
 }
@@ -809,7 +814,7 @@ a {
   border: 1px solid var(--line);
   color: #aab6b2;
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -835,7 +840,7 @@ a {
 .signal-caption {
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.12em;
 }
 
@@ -850,7 +855,7 @@ a {
 .tenant-row span {
   color: #b8c4c0;
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 12px;
 }
 
 .tenant-row i {
@@ -924,7 +929,7 @@ a {
 .fitness-list span {
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.1em;
 }
 
@@ -993,7 +998,7 @@ a {
 .capability-list article > span {
   color: var(--signal);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .capability-list h3 {
@@ -1007,7 +1012,7 @@ a {
 .capability-list p {
   margin: 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.7;
 }
 
@@ -1028,7 +1033,7 @@ a {
   border-right: 1px solid var(--line);
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.12em;
 }
 
@@ -1103,7 +1108,7 @@ a {
   margin-bottom: 28px;
   color: var(--signal);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.14em;
 }
 
@@ -1135,7 +1140,7 @@ a {
   color: var(--ink);
   background: var(--signal);
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.1em;
   transition: background 200ms ease, transform 200ms ease;
@@ -1175,7 +1180,7 @@ footer {
 footer > p {
   margin: 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -1190,9 +1195,9 @@ footer > p {
   margin-top: 35px;
   padding-top: 18px;
   border-top: 1px solid var(--line);
-  color: #56625f;
+  color: var(--muted);
   font-family: var(--mono);
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.14em;
   text-align: right;
 }
@@ -1279,7 +1284,7 @@ a:focus-visible {
 
 @media (max-width: 560px) {
   .site-header { padding-inline: 16px; }
-  .status-pill { font-size: 7px; padding: 9px 11px; }
+  .status-pill { font-size: 10.5px; padding: 9px 11px; }
   .hero { padding: 108px 16px 46px; }
   .eyebrow span:last-child { display: none; }
   .hero h1 { font-size: clamp(54px, 17.5vw, 78px); line-height: 0.9; }
@@ -1301,7 +1306,7 @@ a:focus-visible {
   .project-card:not(.project-featured):not(.project-musclebot) .project-copy h3 { font-size: 50px; }
   .project-description { font-size: 15px; }
   .trace-map { min-height: 265px; }
-  .trace-node { min-width: 76px; font-size: 7px; padding: 9px; }
+  .trace-node { min-width: 80px; font-size: 10.5px; padding: 9px; }
   .node-incident { left: 15px; }
   .node-reason { right: 15px; }
   .demo-note { grid-template-columns: 1fr; }
