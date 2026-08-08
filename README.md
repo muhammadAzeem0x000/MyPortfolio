@@ -1,6 +1,13 @@
 # Muhammad Azeem — Engineering Portfolio
 
-A distinctive, responsive portfolio for a Software Engineer building Full-Stack and Applied AI Systems. The project is a React 19 + TypeScript site using Next.js-compatible routing through vinext, with a production build that can be deployed as a Cloudflare Worker.
+A responsive portfolio for a Software Engineer building Full-Stack and Applied AI Systems.
+
+## Stack
+
+- Next.js 16 App Router
+- React 19
+- TypeScript
+- Tailwind CSS 4 with a custom editorial design system
 
 ## Local development
 
@@ -17,4 +24,6 @@ Open `http://localhost:3000`.
 npm test
 ```
 
-The public portfolio is intentionally static and credential-free. Project demo and source links are maintained in `app/page.tsx`.
+## Vercel
+
+The repository includes `vercel.json` to force the Next.js framework preset. Connect the repository, leave the Root Directory at the repository root, and do not override the Build Command or Output Directory.
