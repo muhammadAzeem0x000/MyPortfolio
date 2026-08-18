@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const projects = [
   {
     index: "01",
@@ -12,6 +14,7 @@ const projects = [
     tags: ["Python", "FastAPI", "Next.js", "PostgreSQL", "pgvector", "DeepSeek", "Gemini"],
     live: "https://tracepilot-six.vercel.app",
     github: "https://github.com/muhammadAzeem0x000/TracePilot",
+    caseStudyUrl: "/case-study/tracepilot",
     featured: true,
   },
   {
@@ -27,6 +30,7 @@ const projects = [
     tags: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "RLS"],
     live: "https://supportflowapp.vercel.app",
     github: "https://github.com/muhammadAzeem0x000/SupportFlow",
+    caseStudyUrl: "/case-study/supportflow",
   },
   {
     index: "03",
@@ -41,6 +45,7 @@ const projects = [
     tags: ["Next.js", "TypeScript", "Supabase", "DeepSeek", "Recharts"],
     live: "https://instructorfeedbackai.vercel.app",
     github: "https://github.com/muhammadAzeem0x000/student_feedback_analyzer",
+    caseStudyUrl: "/case-study/signalroom",
   },
   {
     index: "04",
@@ -55,29 +60,35 @@ const projects = [
     tags: ["React", "TypeScript", "Supabase", "Capacitor", "RevenueCat", "AI APIs"],
     live: "https://musclebot.app",
     github: "https://github.com/muhammadAzeem0x000/fitness",
+    caseStudyUrl: "/case-study/musclebot",
   },
 ];
 
 const capabilities = [
   {
-    number: "A",
-    title: "Applied AI systems",
-    body: "Grounded generation, tool calling, hybrid RAG, structured outputs, reranking, embeddings, and citation validation.",
+    number: "01",
+    title: "AI & LLM Systems",
+    body: "LLM integration, structured generation, hybrid retrieval (pgvector + FTS), grounding, prompt design, evaluation, and AI workflows.",
   },
   {
-    number: "B",
-    title: "Backend architecture",
-    body: "FastAPI services, PostgreSQL data models, durable queues, multi-tenancy, RLS, retries, leases, and observability.",
+    number: "02",
+    title: "Backend Architecture & Data",
+    body: "FastAPI services, PostgreSQL data models, durable queues (FOR UPDATE SKIP LOCKED), multi-tenancy, RLS, retries, and RPCs.",
   },
   {
-    number: "C",
-    title: "Product engineering",
-    body: "Polished web interfaces, real-time workflows, analytics, Android packaging, subscriptions, and third-party integrations.",
+    number: "03",
+    title: "Security & Correctness",
+    body: "Row-Level Security, authorization, tenant isolation, zero-identity models, single-use HMAC codes, and atomic concurrency locks.",
   },
   {
-    number: "D",
-    title: "Evaluation & delivery",
-    body: "Adversarial security tests, frozen holdouts, automated testing, Docker, CI/CD, and production-minded deployments.",
+    number: "04",
+    title: "Full-Stack Product Engineering",
+    body: "Polished web interfaces with Next.js 16 & React 19, TypeScript, real-time workflows, Recharts analytics, and responsive design systems.",
+  },
+  {
+    number: "05",
+    title: "Mobile & Platform Engineering",
+    body: "Capacitor 8 Android packaging, Health Connect integration, RevenueCat subscriptions, FCM push notifications, and production deployments.",
   },
 ];
 
@@ -149,6 +160,7 @@ export default function Home() {
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
           <a href="#expertise">Expertise</a>
+          <a href="#philosophy">Philosophy</a>
           <a href="#contact">Contact</a>
         </nav>
         <a className="status-pill" href="#contact"><i /> Open to conversations</a>
@@ -166,6 +178,8 @@ export default function Home() {
           <p className="hero-intro">
             Software Engineer building full-stack and applied AI systems with Python,
             FastAPI, Next.js, TypeScript, PostgreSQL, and production LLM workflows.
+            I build complete products where AI is connected to real data, workflows,
+            databases, security, and measurable application behavior.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">Explore the systems <span aria-hidden="true">↓</span></a>
@@ -248,6 +262,7 @@ export default function Home() {
                   {project.tags.map((tag) => <li key={tag}>{tag}</li>)}
                 </ul>
                 <div className="project-links">
+                  <Link href={project.caseStudyUrl}>Case study <Arrow /></Link>
                   <a href={project.live} target="_blank" rel="noreferrer">Live demo <Arrow /></a>
                   <a href={project.github} target="_blank" rel="noreferrer">Source <Arrow /></a>
                 </div>
@@ -277,7 +292,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="principles-section">
+      <section className="principles-section" id="philosophy">
         <div className="principles-rail">
           <span>INPUT</span><i /><span>CONSTRAINTS</span><i /><span>EVIDENCE</span><i /><span>OUTPUT</span>
         </div>
@@ -290,7 +305,7 @@ export default function Home() {
             the result dependable enough to use.
           </p>
           <div className="principle-tags">
-            <span>Evidence-grounded</span><span>Security-aware</span><span>Observable</span><span>Evaluated</span>
+            <span>Evidence-grounded</span><span>Security-aware</span><span>Deterministic boundaries</span><span>Observable</span><span>Evaluated</span>
           </div>
         </div>
       </section>
@@ -313,6 +328,10 @@ export default function Home() {
         <p>Software Engineer building Full-Stack &amp; Applied AI Systems.</p>
         <div className="footer-links">
           <a href="#top">Back to top ↑</a>
+          <Link href="/case-study/tracepilot">TracePilot <Arrow /></Link>
+          <Link href="/case-study/supportflow">SupportFlow <Arrow /></Link>
+          <Link href="/case-study/signalroom">SignalRoom <Arrow /></Link>
+          <Link href="/case-study/musclebot">MuscleBot <Arrow /></Link>
           <a href="https://github.com/muhammadAzeem0x000" target="_blank" rel="noreferrer">GitHub <Arrow /></a>
         </div>
         <div className="footer-meta">DESIGNED WITH INTENT / ENGINEERED FOR CLARITY</div>
