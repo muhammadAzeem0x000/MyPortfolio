@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const projects = [
   {
@@ -16,6 +17,8 @@ const projects = [
     github: "https://github.com/muhammadAzeem0x000/TracePilot",
     caseStudyUrl: "/case-study/tracepilot",
     featured: true,
+    mockupImage: "/thumbnails/tracepilot-mockup.png",
+    mockupAlt: "TracePilot AI incident investigation interface mockup with citation verification",
   },
   {
     index: "02",
@@ -31,6 +34,8 @@ const projects = [
     live: "https://supportflowapp.vercel.app",
     github: "https://github.com/muhammadAzeem0x000/SupportFlow",
     caseStudyUrl: "/case-study/supportflow",
+    mockupImage: "/thumbnails/supportflow-mockup.png",
+    mockupAlt: "SupportFlow multi-tenant customer support and SLA tracking interface mockup",
   },
   {
     index: "03",
@@ -46,6 +51,8 @@ const projects = [
     live: "https://instructorfeedbackai.vercel.app",
     github: "https://github.com/muhammadAzeem0x000/student_feedback_analyzer",
     caseStudyUrl: "/case-study/signalroom",
+    mockupImage: "/thumbnails/signalroom-mockup.png",
+    mockupAlt: "SignalRoom anonymous feedback analyzer and AI recommendations interface mockup",
   },
   {
     index: "04",
@@ -61,6 +68,8 @@ const projects = [
     live: "https://musclebot.app",
     github: "https://github.com/muhammadAzeem0x000/fitness",
     caseStudyUrl: "/case-study/musclebot",
+    mockupImage: "/thumbnails/musclebot-mockup.png",
+    mockupAlt: "MuscleBot cross-platform AI fitness, nutrition, and workout logging interface mockup",
   },
 ];
 
@@ -96,54 +105,39 @@ function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
-function ProjectVisual({ slug }: { slug: string }) {
-  if (slug === "tracepilot") {
-    return (
-      <div className="trace-map" aria-label="TracePilot investigation flow">
-        <div className="trace-node node-incident"><span>01</span>Incident</div>
-        <div className="trace-line line-one" />
-        <div className="trace-node node-evidence"><span>02</span>Evidence</div>
-        <div className="trace-line line-two" />
-        <div className="trace-node node-reason"><span>03</span>Reason</div>
-        <div className="trace-line line-three" />
-        <div className="trace-node node-cite"><span>04</span>Cite</div>
-        <div className="trace-pulse" />
-      </div>
-    );
-  }
+interface ProjectVisualProps {
+  slug: string;
+  title: string;
+  mockupImage: string;
+  mockupAlt: string;
+  featured?: boolean;
+}
 
-  if (slug === "supportflow") {
-    return (
-      <div className="tenant-map" aria-label="SupportFlow tenant isolation diagram">
-        <div className="tenant-title">TENANT ISOLATION</div>
-        <div className="tenant-row"><span>ORG_A</span><i /><i /><i /></div>
-        <div className="tenant-row"><span>ORG_B</span><i /><i /><i /></div>
-        <div className="tenant-row"><span>ORG_C</span><i /><i /><i /></div>
-        <div className="tenant-policy">RLS POLICY / ACTIVE</div>
-      </div>
-    );
-  }
-
-  if (slug === "signalroom") {
-    return (
-      <div className="signal-map" aria-label="SignalRoom feedback signal visualization">
-        <div className="signal-bars">
-          {[32, 58, 43, 78, 52, 88, 65, 74, 48, 82, 62, 92].map((height, index) => (
-            <i key={index} style={{ height: `${height}%` }} />
-          ))}
-        </div>
-        <div className="signal-caption"><span>PRIVATE INPUT</span><span>GROUNDED OUTPUT</span></div>
-      </div>
-    );
-  }
-
+function ProjectVisual({ slug, title, mockupImage, mockupAlt, featured }: ProjectVisualProps) {
   return (
-    <div className="fitness-map" aria-label="MuscleBot product metric visualization">
-      <div className="fitness-ring"><span>1.3K+</span><small>EXERCISES</small></div>
-      <div className="fitness-list">
-        <div><span>WORKOUTS</span><i style={{ width: "88%" }} /></div>
-        <div><span>NUTRITION</span><i style={{ width: "72%" }} /></div>
-        <div><span>PROGRESS</span><i style={{ width: "81%" }} /></div>
+    <div className={`project-mockup-wrapper mockup-${slug}`} aria-label={`${title} interface mockup`}>
+      <div className="mockup-chrome">
+        <div className="mockup-dots" aria-hidden="true">
+          <span className="dot dot-close" />
+          <span className="dot dot-min" />
+          <span className="dot dot-max" />
+        </div>
+        <span className="mockup-url-bar">{slug}.system // preview</span>
+        <span className="mockup-badge"><i /> ACTIVE</span>
+      </div>
+      <div className="mockup-viewport">
+        <Image
+          src={mockupImage}
+          alt={mockupAlt}
+          width={1200}
+          height={750}
+          priority={featured}
+          className="mockup-image"
+          sizes="(max-width: 820px) 100vw, (max-width: 1200px) 50vw, 650px"
+        />
+        <div className="mockup-scan-sheen" aria-hidden="true" />
+        <div className="mockup-corner corner-top-left" aria-hidden="true" />
+        <div className="mockup-corner corner-bottom-right" aria-hidden="true" />
       </div>
     </div>
   );
@@ -249,7 +243,13 @@ export default function Home() {
                   <p className="project-description">{project.description}</p>
                   <p className="project-detail">{project.detail}</p>
                 </div>
-                <ProjectVisual slug={project.slug} />
+                <ProjectVisual
+                  slug={project.slug}
+                  title={project.title}
+                  mockupImage={project.mockupImage}
+                  mockupAlt={project.mockupAlt}
+                  featured={project.featured}
+                />
               </div>
               {project.slug === "tracepilot" && (
                 <div className="demo-note">
