@@ -15,6 +15,8 @@ export interface ProjectCardData {
   github: string;
   caseStudyUrl: string;
   primaryProof: string;
+  mockupImage: string;
+  mockupAlt: string;
 }
 
 export interface ArchitectureNode {
@@ -43,6 +45,8 @@ export interface CaseStudyData {
   primaryProof: string;
   label: string;
   tags: string[];
+  mockupImage?: string;
+  mockupAlt?: string;
 
   // 1. Problem
   problemTitle: string;
@@ -117,6 +121,8 @@ export const PROJECTS_LIST: ProjectCardData[] = [
     github: "https://github.com/muhammadAzeem0x000/TracePilot",
     caseStudyUrl: "/case-study/tracepilot",
     primaryProof: "AI systems, grounding, retrieval, evaluation",
+    mockupImage: "/thumbnails/tracepilot-mockup.png",
+    mockupAlt: "TracePilot AI incident investigation workspace and citation verification dashboard mockup",
   },
   {
     index: "02",
@@ -132,6 +138,8 @@ export const PROJECTS_LIST: ProjectCardData[] = [
     github: "https://github.com/muhammadAzeem0x000/SupportFlow",
     caseStudyUrl: "/case-study/supportflow",
     primaryProof: "Secure SaaS, multi-tenancy, authorization, realtime",
+    mockupImage: "/thumbnails/supportflow-mockup.png",
+    mockupAlt: "SupportFlow multi-tenant customer support SaaS ticketing and SLA management interface mockup",
   },
   {
     index: "03",
@@ -147,6 +155,8 @@ export const PROJECTS_LIST: ProjectCardData[] = [
     github: "https://github.com/muhammadAzeem0x000/student_feedback_analyzer",
     caseStudyUrl: "/case-study/signalroom",
     primaryProof: "Privacy, structured AI, database correctness, concurrency",
+    mockupImage: "/thumbnails/signalroom-mockup.png",
+    mockupAlt: "SignalRoom anonymous feedback analytics and AI recommendation interface mockup",
   },
   {
     index: "04",
@@ -162,6 +172,8 @@ export const PROJECTS_LIST: ProjectCardData[] = [
     github: "https://github.com/muhammadAzeem0x000/fitness",
     caseStudyUrl: "/case-study/musclebot",
     primaryProof: "Product engineering, mobile, AI, monetization, product judgment",
+    mockupImage: "/thumbnails/musclebot-mockup.png",
+    mockupAlt: "MuscleBot cross-platform mobile and web fitness tracking interface mockup",
   },
 ];
 
