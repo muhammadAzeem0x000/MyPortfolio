@@ -37,5 +37,14 @@ test("keeps the project story, public assets, and homepage route intact", async 
   await Promise.all([
     access(new URL("public/profile.jpg", root)),
     access(new URL("public/og.png", root)),
+    access(new URL("public/thumbnails/tracepilot-mockup.png", root)),
+    access(new URL("public/thumbnails/supportflow-mockup.png", root)),
+    access(new URL("public/thumbnails/signalroom-mockup.png", root)),
+    access(new URL("public/thumbnails/musclebot-mockup.png", root)),
   ]);
+
+  assert.match(page, /tracepilot-mockup\.png/);
+  assert.match(page, /supportflow-mockup\.png/);
+  assert.match(page, /signalroom-mockup\.png/);
+  assert.match(page, /musclebot-mockup\.png/);
 });
