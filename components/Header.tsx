@@ -33,8 +33,13 @@ export function Header({ isCaseStudy = false }: HeaderProps) {
         )}
       </nav>
 
-      <a className="status-pill" href={isCaseStudy ? "/#contact" : "#contact"}>
-        <i /> Open to conversations
+      <a
+        className="status-pill"
+        href={isCaseStudy ? "/#contact" : "#contact"}
+        title="Available for full-time roles & engineering projects"
+        aria-label="Available for hire, jump to contact section"
+      >
+        <i /> Available for hire
       </a>
     </header>
   );
