@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ContactSection } from "./ContactSection";
 
 interface FooterProps {
   showContactCta?: boolean;
@@ -7,31 +8,7 @@ interface FooterProps {
 export function Footer({ showContactCta = false }: FooterProps) {
   return (
     <>
-      {showContactCta && (
-        <section className="contact-section" id="contact">
-          <div className="contact-signal">
-            <i />
-            <span>SIGNAL OPEN</span>
-          </div>
-          <p className="section-index">05 / START A CONVERSATION</p>
-          <h2>
-            Have a hard system<br />worth <em>building well?</em>
-          </h2>
-          <p className="contact-copy">
-            I’m interested in applied AI, backend-heavy products, and engineering
-            problems where correctness matters as much as the interface.
-          </p>
-          <a
-            className="contact-button"
-            href="https://github.com/muhammadAzeem0x000"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span>LET’S COMPARE NOTES</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-        </section>
-      )}
+      {showContactCta && <ContactSection />}
 
       <footer>
         <div className="footer-brand">
@@ -44,6 +21,12 @@ export function Footer({ showContactCta = false }: FooterProps) {
           <Link href="/case-study/supportflow">SupportFlow ↗</Link>
           <Link href="/case-study/signalroom">SignalRoom ↗</Link>
           <Link href="/case-study/musclebot">MuscleBot ↗</Link>
+          <a href="mailto:azeemmuhammad0150@gmail.com" target="_blank" rel="noreferrer">
+            Email ↗
+          </a>
+          <a href="https://www.linkedin.com/in/muhammadAzeem0x000" target="_blank" rel="noreferrer">
+            LinkedIn ↗
+          </a>
           <a href="https://github.com/muhammadAzeem0x000" target="_blank" rel="noreferrer">
             GitHub ↗
           </a>

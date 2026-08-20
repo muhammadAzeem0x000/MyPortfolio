@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ContactSection } from "@/components/ContactSection";
 
 const projects = [
   {
@@ -157,7 +158,14 @@ export default function Home() {
           <a href="#philosophy">Philosophy</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a className="status-pill" href="#contact"><i /> Open to conversations</a>
+        <a
+          className="status-pill"
+          href="#contact"
+          title="Available for full-time roles & engineering projects"
+          aria-label="Available for hire, jump to contact section"
+        >
+          <i /> Available for hire
+        </a>
       </header>
 
       <section className="hero" id="top">
@@ -310,18 +318,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="contact-section" id="contact">
-        <div className="contact-signal"><i /><span>SIGNAL OPEN</span></div>
-        <p className="section-index">05 / START A CONVERSATION</p>
-        <h2>Have a hard system<br />worth <em>building well?</em></h2>
-        <p className="contact-copy">
-          I’m interested in applied AI, backend-heavy products, and engineering
-          problems where correctness matters as much as the interface.
-        </p>
-        <a className="contact-button" href="https://github.com/muhammadAzeem0x000" target="_blank" rel="noreferrer">
-          <span>LET’S COMPARE NOTES</span><Arrow />
-        </a>
-      </section>
+      <ContactSection />
 
       <footer>
         <div className="footer-brand">MUHAMMAD<br />AZEEM</div>
@@ -332,6 +329,8 @@ export default function Home() {
           <Link href="/case-study/supportflow">SupportFlow <Arrow /></Link>
           <Link href="/case-study/signalroom">SignalRoom <Arrow /></Link>
           <Link href="/case-study/musclebot">MuscleBot <Arrow /></Link>
+          <a href="mailto:azeemmuhammad0150@gmail.com" target="_blank" rel="noreferrer">Email <Arrow /></a>
+          <a href="https://www.linkedin.com/in/muhammadAzeem0x000" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
           <a href="https://github.com/muhammadAzeem0x000" target="_blank" rel="noreferrer">GitHub <Arrow /></a>
         </div>
         <div className="footer-meta">DESIGNED WITH INTENT / ENGINEERED FOR CLARITY</div>
