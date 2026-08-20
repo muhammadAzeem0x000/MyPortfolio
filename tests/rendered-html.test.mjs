@@ -47,4 +47,11 @@ test("keeps the project story, public assets, and homepage route intact", async 
   assert.match(page, /supportflow-mockup\.png/);
   assert.match(page, /signalroom-mockup\.png/);
   assert.match(page, /musclebot-mockup\.png/);
+  assert.match(page, /Available for hire/);
+  assert.match(page, /ContactSection/);
+
+  const contactSection = await readFile(new URL("components/ContactSection.tsx", root), "utf8");
+  assert.match(contactSection, /azeemmuhammad0150@gmail\.com/);
+  assert.match(contactSection, /linkedin\.com/);
+  assert.match(contactSection, /github\.com/);
 });
