@@ -5,7 +5,7 @@ import { useState } from "react";
 const CONTACT_INFO = {
   email: "azeemmuhammad0150@gmail.com",
   github: "https://github.com/muhammadAzeem0x000",
-  linkedin: "https://www.linkedin.com/in/muhammadAzeem0x000",
+  linkedin: "https://www.linkedin.com/in/muhammad-azeem012",
   mailtoSubject: "Project Inquiry — Muhammad Azeem",
   mailtoBody: "Hi Muhammad,%0D%0A%0D%0AI came across your portfolio and would like to discuss a project / role.%0D%0A%0D%0ABest regards,",
 };
