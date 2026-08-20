@@ -1093,9 +1093,12 @@ a {
   margin-top: 30px;
 }
 
+/* ==========================================================================
+   Contact Hub & Direct Communication Channels
+   ========================================================================== */
 .contact-section {
   position: relative;
-  min-height: 760px;
+  min-height: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1122,59 +1125,222 @@ a {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   color: var(--signal);
   font-family: var(--mono);
   font-size: 12px;
   letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .contact-section .section-index,
 .contact-section h2,
 .contact-copy,
-.contact-button,
+.contact-status-bar,
+.contact-channels-grid,
 .contact-signal {
   position: relative;
   z-index: 2;
 }
 
 .contact-copy {
-  max-width: 620px;
-  margin: 34px 0 0;
+  max-width: 660px;
+  margin: 28px 0 0;
   color: var(--muted);
   font-size: 16px;
   line-height: 1.7;
 }
 
-.contact-button {
-  width: min(100%, 420px);
-  min-height: 82px;
+.contact-status-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin: 32px 0 46px;
+  padding: 10px 22px;
+  border: 1px solid var(--line-strong);
+  border-radius: 99px;
+  background: rgba(13, 20, 20, 0.85);
+  backdrop-filter: blur(12px);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--paper);
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.status-item strong {
+  color: var(--signal);
+  font-weight: 700;
+}
+
+.status-divider {
+  width: 1px;
+  height: 14px;
+  background: var(--line-strong);
+}
+
+.status-indicator.live {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 0 4px rgba(119, 242, 208, 0.12), 0 0 12px var(--signal);
+  animation: pulse 2.4s ease-out infinite;
+}
+
+.contact-channels-grid {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 20px;
+  text-align: left;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.02), transparent 50%),
+    var(--ink-soft);
+  transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(119, 242, 208, 0.45);
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(119, 242, 208, 0.08);
+}
+
+.contact-card-featured {
+  border-color: rgba(119, 242, 208, 0.35);
+  background:
+    radial-gradient(circle at 90% 10%, rgba(119, 242, 208, 0.07), transparent 50%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.03), transparent 50%),
+    var(--ink-soft);
+}
+
+.contact-card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 40px;
-  padding: 0 26px;
-  color: var(--ink);
-  background: var(--signal);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.channel-tag {
+  color: var(--muted);
   font-family: var(--mono);
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 11px;
+  font-weight: 700;
   letter-spacing: 0.1em;
-  transition: background 200ms ease, transform 200ms ease;
+  text-transform: uppercase;
 }
 
-.contact-button > span {
+.channel-beacon {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--signal);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.channel-beacon i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 6px var(--signal);
+}
+
+.contact-card-body h3 {
   margin: 0;
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--paper);
 }
 
-.contact-button > span:last-child {
-  font-size: 24px;
+.channel-value {
+  margin: 10px 0 0;
+  color: var(--signal);
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  word-break: break-all;
 }
 
-.contact-button:hover,
-.contact-button:focus-visible {
-  background: #a1ffe5;
-  transform: translateY(-3px);
+.channel-description {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.contact-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.contact-card-actions .button {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 16px;
+  font-size: 11.5px;
+  cursor: pointer;
+}
+
+.copy-btn {
+  border-color: var(--line-strong);
+  color: var(--muted);
+  background: transparent;
+}
+
+.copy-btn:hover {
+  color: var(--paper);
+  border-color: var(--signal);
+  background: var(--signal-soft);
+}
+
+.copy-btn.copied {
+  color: var(--ink) !important;
+  background: var(--signal) !important;
+  border-color: var(--signal) !important;
+  font-weight: 800;
+}
+
+.contact-arrow {
+  color: var(--signal);
+  font-size: 14px;
+  transition: transform 200ms ease;
+}
+
+.button-primary .contact-arrow {
+  color: var(--ink);
+}
+
+.button:hover .contact-arrow {
+  transform: translate(2px, -2px);
 }
 
 footer {
@@ -1293,6 +1459,9 @@ a:focus-visible {
   .capability-list article { grid-template-columns: 32px 1fr; }
   .capability-list p { grid-column: 2; }
   .principles-section { grid-template-columns: 70px 1fr; min-height: auto; }
+  .contact-channels-grid { grid-template-columns: 1fr; max-width: 540px; }
+  .contact-status-bar { flex-direction: column; gap: 8px; border-radius: 12px; padding: 12px 18px; }
+  .status-divider { display: none; }
   footer { grid-template-columns: 1fr 1fr; }
   .footer-links { grid-column: 2; grid-row: 1 / span 2; flex-direction: column; align-items: flex-end; gap: 14px; }
 }
@@ -1331,8 +1500,8 @@ a:focus-visible {
   .principles-rail { display: none; }
   .principles-copy { padding: 60px 16px; }
   .principles-copy blockquote { font-size: clamp(36px, 12vw, 58px); }
-  .contact-section { min-height: auto; padding-block: 80px; }
-  .contact-button { min-height: 64px; font-size: 11px; }
+  .contact-section { min-height: auto; padding-block: 70px; }
+  .contact-card { padding: 22px 18px; }
   footer { grid-template-columns: 1fr; padding: 40px 16px 24px; gap: 20px; }
   footer > p { display: none; }
   .footer-links { justify-content: flex-start; flex-wrap: wrap; gap: 14px; }
