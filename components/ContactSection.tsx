@@ -34,11 +34,6 @@ export function ContactSection() {
 
   return (
     <section className="contact-section" id="contact">
-      <div className="contact-signal">
-        <i />
-        <span>DIRECT COMMUNICATION CHANNELS</span>
-      </div>
-
       <p className="section-index">GET IN TOUCH</p>
       <h2>
         Have a system worth<br /><em>building together?</em>
@@ -49,18 +44,6 @@ export function ContactSection() {
         and applied AI systems. Reach out directly through any channel below—I typically
         respond within 24 hours.
       </p>
-
-      {/* Live availability banner */}
-      <div className="contact-status-bar">
-        <div className="status-item">
-          <span className="status-indicator live" />
-          <span>Status: <strong>Open to Full-Time &amp; Contracts</strong></span>
-        </div>
-        <div className="status-divider" />
-        <div className="status-item">
-          <span>Response time: <strong>&lt; 24 hours</strong></span>
-        </div>
-      </div>
 
       {/* Communication Cards Grid */}
       <div className="contact-channels-grid">

@@ -1145,7 +1145,7 @@ a {
 
 .contact-copy {
   max-width: 660px;
-  margin: 28px 0 0;
+  margin: 28px 0 44px;
   color: var(--muted);
   font-size: 16px;
   line-height: 1.7;
