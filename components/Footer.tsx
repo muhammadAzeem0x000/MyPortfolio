@@ -31,7 +31,6 @@ export function Footer({ showContactCta = false }: FooterProps) {
             GitHub ↗
           </a>
         </div>
-        <div className="footer-meta">DESIGNED WITH INTENT / ENGINEERED FOR CLARITY</div>
       </footer>
     </>
   );
