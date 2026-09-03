@@ -39,7 +39,7 @@ export function ContactSection() {
         <span>DIRECT COMMUNICATION CHANNELS</span>
       </div>
 
-      <p className="section-index">05 / GET IN TOUCH</p>
+      <p className="section-index">GET IN TOUCH</p>
       <h2>
         Have a system worth<br /><em>building together?</em>
       </h2>

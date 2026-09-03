@@ -171,7 +171,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
-          <p className="eyebrow"><span>01 / SYSTEM PROFILE</span><span>FULL-STACK × APPLIED AI</span></p>
+          <p className="eyebrow"><span>SYSTEM PROFILE</span><span>FULL-STACK × APPLIED AI</span></p>
           <h1>
             I build software
             <span>that can <em>reason</em>,</span>
@@ -219,7 +219,7 @@ export default function Home() {
       <section className="work-section" id="work">
         <div className="section-heading">
           <div>
-            <p className="section-index">02 / SELECTED SYSTEMS</p>
+            <p className="section-index">SELECTED SYSTEMS</p>
             <h2>Built beyond<br /><em>the happy path.</em></h2>
           </div>
           <p>
@@ -276,7 +276,7 @@ export default function Home() {
 
       <section className="expertise-section" id="expertise">
         <div className="expertise-heading">
-          <p className="section-index">03 / ENGINEERING RANGE</p>
+          <p className="section-index">ENGINEERING RANGE</p>
           <h2>From model call<br />to <em>maintainable system.</em></h2>
           <p className="expertise-intro">
             I work across the boundaries where AI behavior, backend reliability,
@@ -299,7 +299,7 @@ export default function Home() {
           <span>INPUT</span><i /><span>CONSTRAINTS</span><i /><span>EVIDENCE</span><i /><span>OUTPUT</span>
         </div>
         <div className="principles-copy">
-          <p className="section-index">04 / BUILD PHILOSOPHY</p>
+          <p className="section-index">BUILD PHILOSOPHY</p>
           <blockquote>“Useful AI begins where the demo ends.”</blockquote>
           <p>
             The interesting work is not wiring up one model call. It is building the
