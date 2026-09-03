@@ -198,15 +198,9 @@ export default function Home() {
 
         <div className="hero-visual" aria-label="Portrait of Muhammad Azeem">
           <div className="portrait-frame">
-            <div className="frame-label top-label">BUILDER / 0001</div>
-            <div className="frame-label side-label">EVIDENCE &gt; HYPE</div>
             <div className="portrait-image" />
             <div className="scan-line" aria-hidden="true" />
             <div className="corner corner-one" /><div className="corner corner-two" />
-            <div className="portrait-caption">
-              <div><span>DISCIPLINE</span><strong>Engineering</strong></div>
-              <div><span>CURRENT SIGNAL</span><strong className="signal-live"><i /> Building</strong></div>
-            </div>
           </div>
           <div className="orbit-note note-one"><span>LLM</span>GROUNDING</div>
           <div className="orbit-note note-two"><span>DB</span>POSTGRES</div>

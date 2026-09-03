@@ -428,7 +428,7 @@ a {
 
 .portrait-frame {
   position: relative;
-  aspect-ratio: 0.78;
+  aspect-ratio: 0.82;
   padding: 18px;
   border: 1px solid var(--line-strong);
   background: rgba(13, 20, 19, 0.76);
@@ -444,7 +444,7 @@ a {
 
 .portrait-image {
   width: 100%;
-  height: calc(100% - 70px);
+  height: 100%;
   background-image:
     linear-gradient(to top, rgba(8, 12, 12, 0.42), transparent 28%),
     url("/profile.jpg");
@@ -456,7 +456,7 @@ a {
 .portrait-frame::after {
   content: "";
   position: absolute;
-  inset: 18px 18px 87px;
+  inset: 18px;
   background: repeating-linear-gradient(to bottom, transparent 0 5px, rgba(119, 242, 208, 0.035) 6px);
   pointer-events: none;
 }
@@ -516,7 +516,7 @@ a {
 
 .corner-two {
   right: 10px;
-  bottom: 80px;
+  bottom: 10px;
   border-right: 2px solid;
   border-bottom: 2px solid;
 }
